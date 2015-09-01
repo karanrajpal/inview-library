@@ -13,4 +13,5 @@ Provides a callback for when elements come into view or go out of view.
                                 2. endLimit  
                                 3. direction  
                                 4. period  
-    Public APIs : getInViewElements - Returns the array of items that are currently in view.  
+####Public APIs  
+**getInViewElements** - Returns the array of items that are currently in view.  
