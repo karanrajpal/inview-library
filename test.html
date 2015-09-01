@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no"> 
+<style type="text/css">
+	html, body {
+		padding: 0;
+		margin: 0;
+		width: 320px;
+		height: 568px;
+	}
+	#cardContainer {
+		overflow-y: scroll;
+		height: 568px;
+	}
+	.card {
+		width: 290px;
+		height: 160px;
+		background-color: gray;
+		margin: 5px auto;
+		color: white;
+		-webkit-transition: all 0.3s ease;
+		font-size: 35px;
+		text-align: center;
+		opacity: 0.8;
+	}
+	.inview {
+		width: 310px;
+		opacity: 1;
+	}
+</style>
+<body>
+	<div id="cardContainer">
+	</div>
+</body>
+<script type="text/javascript" src="inviewlib.js"></script>
+<script type="text/javascript">
+	(function(){
+		var cardTemplate = '<div class="card" id={i}>{title}</div>';
+		for(var i = 0; i< 15;i++) {
+			cardTemplateBuffer = cardTemplate;
+			cardTemplateBuffer = cardTemplateBuffer.replace('{i}',i);
+			cardTemplateBuffer = cardTemplateBuffer.replace('{title}',i);
+			cardContainer.innerHTML+=cardTemplateBuffer;
+		}
+		var ifcInView = function(card) {
+			console.log(card);
+			card.classList.add('inview');
+		}
+		var ifcOutView = function(card) {
+			console.log('ifcOutView');
+			console.log(card);
+		}
+		var a = new inViewLibrary('#cardContainer','.card',{inView: ifcInView},{direction: 'vertical'});
+		
+		/* Test for getInViewElements */
+		setTimeout(function() {
+			var currentlyInView = a.getInViewElements();
+			console.log(currentlyInView);
+		},5000);
+	})();
+</script>
+</html>
