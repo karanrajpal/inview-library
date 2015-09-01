@@ -2,7 +2,7 @@
 Pure JS Library that lets you figure out which elements are in view.
 Provides a callback for when elements come into view or go out of view.
 
-####**Parameters to inViewLibrary function  
+####Parameters to inViewLibrary function  
    **cardContainerId** | required | ID of the container with fixed height.  
    **cardSelector**    | required | Classname of each repeatable item.  
    **callbacks**       | optional | Callbacks object. You can specify 2 functions in an object with 2 properties  
