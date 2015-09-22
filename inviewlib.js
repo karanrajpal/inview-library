@@ -64,7 +64,7 @@ function inViewLibrary( cardContainerId, cardSelector, callbacks, config ) {
                 if (inViewArray[cardIndex]===1) {
                     inViewArray[cardIndex]=0;
                     if(typeof callbacks !== 'undefined' && typeof callbacks.outView === 'function') {
-                        callbacks.outCard(card);
+                        callbacks.outView(card);
                     }
                 }
             }
