@@ -1,4 +1,4 @@
-###InView Library  
+### InView Library  
 Pure JS Library that lets you figure out which elements are in view.
 Provides a callback for when elements come into view or go out of view.
 
